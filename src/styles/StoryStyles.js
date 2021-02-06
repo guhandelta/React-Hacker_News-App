@@ -31,9 +31,13 @@ export const StoryTitle = styled.h1`
 export const StoryMeta = styled.div`
     font-style: italic;
 
+    span:first-child{
+        margin-right: 0.625rem;
+    }
+
     /* span, which is not the 1st child, but bfore that child add content and margin*/
     > span:not(:first-child):before{
-        content: '=>';
+        content: '-';
         margin: 0 0.4375em;
     }
 

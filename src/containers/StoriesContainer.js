@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getStoryIds } from '../services/hnApi';
 import { Story } from '../components';
+import { StoriesContainerWrapper, GlobalStyle } from '../styles/StoriesContainerStyles';
 
 const StoriesContainer = () => {
   const [storyIds, setStoryIds] = useState([]); // Initializing empty array as the getStoryIds returns an array of ID's
