@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import { MAX_STORIES, STORY_INCREMENT } from '../constants';
+import { debounce } from '../utils/debounce';
 
 const useInifiniteScroll = () => {
     const [loading, setLoading] = useState(false);
     const [count, setCount] = useState(STORY_INCREMENT);
 
-    const handleScroll = () =>{
+    const handleScroll = debounce(() =>{
         /* An element's scrollTop value is a measurement of the distance from the element's top to its topmost visible content. 
         When an element's content does not generate a vertical scrollbar, then its scrollTop value is 0. 
 
@@ -17,7 +18,7 @@ const useInifiniteScroll = () => {
         }
 
         setLoading(true);
-    };
+    }, 500);
 
     useEffect(() =>{ 
         if(!loading) return;
@@ -37,7 +38,7 @@ const useInifiniteScroll = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     },[]);
-    
+
     return { count };
 }
 
