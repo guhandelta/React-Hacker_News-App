@@ -36,7 +36,7 @@ export const StoryMeta = styled.div`
     }
 
     /* span, which is not the 1st child, but bfore that child add content and margin*/
-    > span:not(:first-child):before{
+    span:not(:first-child):before{
         content: '-';
         margin: 0 0.4375em;
     }

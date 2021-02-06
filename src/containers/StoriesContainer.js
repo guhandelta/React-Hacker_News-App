@@ -11,12 +11,13 @@ const StoriesContainer = () => {
   }, [])
 
   return (
-    <div>
-      <h1>StoriesContainer Still Works!!.......</h1>
-      {
-          storyIds.map((storyId,i) => <Story storyId={storyId} key={storyId} />)
-      }
-    </div>
+    <>
+      <GlobalStyle />
+      <StoriesContainerWrapper data-test-id="stories-container">
+        <h1>Hacker News</h1>
+        {storyIds.map((storyId,i) => <Story storyId={storyId} key={storyId} />)}
+      </StoriesContainerWrapper>
+    </>
   )
 }
 
