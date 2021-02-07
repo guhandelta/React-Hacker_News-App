@@ -24,7 +24,7 @@ const Story = ({storyId}) => {
 
         <StoryMeta>
             <span data-testid="story-by">
-                <StoryMetaElement color="#000">Author:</StoryMetaElement> {story.by}
+                <StoryMetaElement color="#000">By:</StoryMetaElement> {story.by}
             </span>
             <span data-testid="story-time">
                 <StoryMetaElement color="#000">Posted:</StoryMetaElement> {` `}
