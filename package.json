@@ -14,6 +14,14 @@
     "web-vitals": "^1.0.1"
   },
   "jest":{
+    "collectCoverageFrom":[
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/hooks/*.js",
+      "!src/mappers/*.js",
+      "!src/selectors/*.js",
+      "!src/utils/*.js"
+    ],
     "coverageThreshold":{
       "global":{
         "branches":95,
