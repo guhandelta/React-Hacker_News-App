@@ -13,6 +13,20 @@
     "styled-components": "^5.2.1",
     "web-vitals": "^1.0.1"
   },
+  "jest":{
+    "coverageThreshold":{
+      "global":{
+        "branches":95,
+        "functions":95,
+        "lines":95,
+        "statements":95
+      }
+    },
+    "coverageReporters":[
+      "html",
+      "text"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
